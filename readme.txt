@@ -1,8 +1,8 @@
 === SideOffer ===
 Contributors: HeavyDigital
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VA3ZX5ZPCYHXY
-Tags: slider, sidebar, call to action, conversion optimization, content marketing, lead generation, contact form 7
-Requires at least: 2.0.2
+Tags: action, admin, business, call to action, contact, contact form 7, content, content marketing, conversion optimization, cta, email, form, inbound, inbound marketing, leads, lead generation, marketing, offer, sidebar, slider
+Requires at least: 3.0
 Tested up to: 3.4.1
 Stable tag: 1.0.1
 License: GPLv2 or later
