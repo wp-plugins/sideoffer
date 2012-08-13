@@ -1,5 +1,5 @@
 === SideOffer ===
-Contributors: heavydigital
+Contributors: HeavyDigital
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VA3ZX5ZPCYHXY
 Tags: slider, sidebar, call to action, conversion optimization, content marketing, lead generation, contact form 7
 Requires at least: 2.0.2
