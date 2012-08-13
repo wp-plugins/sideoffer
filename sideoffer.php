@@ -70,7 +70,7 @@ function hd_create_menu() {
 	add_menu_page( 
 	HD_PUGIN_NAME,
 	HD_PUGIN_NAME,
-	'edit_other_pages', // Must be an editor or higher
+	'manage_options',
 	'sideoffer',
 	'sideoffer_options',
 	plugins_url('/images/icon-hd.png', __FILE__));
@@ -80,7 +80,7 @@ function hd_create_menu() {
 	'sideoffer',
 	HD_PUGIN_NAME,
 	HD_PUGIN_NAME,
-	'edit_other_pages', // Must be an editor or higher
+	'manage_options',
 	'sideoffer',
 	'sideoffer_options'
 	);

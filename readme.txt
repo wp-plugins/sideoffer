@@ -1,10 +1,10 @@
 === SideOffer ===
-Contributors: heavydigital
+Contributors: HeavyDigital
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VA3ZX5ZPCYHXY
 Tags: slider, sidebar, call to action, conversion optimization, content marketing, lead generation, contact form 7
 Requires at least: 2.0.2
 Tested up to: 3.4.1
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,10 @@ Features include:
 1. Optional: Include &lt;a href="javascript:void(0);" class="sideoffer"&gt;Links&lt;/a&gt; on your site to trigger the SideOffer
 
 == Changelog ==
+
+= 1.0.1 =
+* Added "Active but not live" admin message
+* Bug Fixes (Missing esc_attr(),$capability=manage_options)
 
 = 1.0 =
 * Initial Release
