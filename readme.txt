@@ -1,7 +1,7 @@
 === SideOffer ===
 Contributors: HeavyDigital
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VA3ZX5ZPCYHXY
-Tags: action, admin, business, call to action, contact, contact form 7, content, content marketing, conversion optimization, cta, email, form, inbound, inbound marketing, leads, lead generation, marketing, offer, sidebar, slider
+Tags: action, admin, business, call to action, contact, contact form 7, content, content marketing, conversion optimization, cta, email, form, inbound, inbound marketing, leads, lead generation, marketing, offer, popout,sidebar, slideout, slider
 Requires at least: 3.0
 Tested up to: 3.4.1
 Stable tag: 1.0.1
@@ -21,6 +21,12 @@ Features include:
 *	Easy and Unteractive Setup with real-time visual feedback
 *	Anchor link triggering via inclusion the "sideoffer" class
 *	Custom Background Graphics (PSD Source included) 
+
+If you have questions, comments or feature requests  feel free to email us at Info@HeaavyDigital.net. 
+
+Stay in the know:  Become a fan of Heavy Digital on Facebook!  http://www.facebook.com/HeavyDigital 
+
+Be sure to check out our site www.HeavyDigital.net
 
 == Installation ==
 
