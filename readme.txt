@@ -18,9 +18,9 @@ You could collect emails for your newsletter, offer a free download or make your
 
 Features include: 
 
-*	Easy and Unteractive Setup with real-time visual feedback
+*	Easy and Interactive Setup with real-time visual feedback
 *	Anchor link triggering via inclusion the "sideoffer" class
-*	Custom Background Graphics (PSD Source included) 
+*	Custom Background Graphics ([PSD Source Included](http://www.HeavyDigital.net/wp-content/plugins/sideoffer/images/sideoffer/sideoffer-bg.zip "PSD Source File")) 
 
 If you have questions, comments or feature requests  feel free to email us at Info@HeaavyDigital.net. 
 
