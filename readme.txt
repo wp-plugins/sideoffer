@@ -12,11 +12,11 @@ SideOffer is a pop-out tab slider, designed to increase conversions by allowing 
 
 == Description ==
 
-You need to get your offer or call to action noticed, and this plugin can help. A slick side tab pop-out slider with fully customizable graphics (PSD included!), [SideOffer](http://www.HeavyDigital.net/plugins/sideoffer/  "SideOffer Homepage")SideOffer is designed to help increase leads and conversions by allowing you to present your offer in a persistant side tab on every page of your site, giving your users more opportunity to take notice and take action! 
+You need to get your offer or call to action noticed, and this plugin can help. A slick side tab pop-out slider with fully customizable graphics (PSD included!), [SideOffer](http://www.HeavyDigital.net/plugins/sideoffer/  "SideOffer Homepage") is designed to help increase leads and conversions by allowing you to present your offer in a persistant side tab on every page of your site, giving your users more opportunity to take notice and take action! 
 
-SideOffer was developed to help strengthen and sustain your inbound marketing and conversion optimization efforts. You could collect emails for your newsletter, offer a free download or make your contact form available on every page. How you use it is up to you, but hte net result is the same: By making it easier for your users to act on your offer, you grow your funnel, and generate more inbound leads! 
+SideOffer was developed to help strengthen and sustain your inbound marketing and conversion optimization efforts. You could collect emails for your newsletter, offer a free download or make your contact form available on every page. How you use it is up to you, but the net result is the same: By making it easier for your users to act on your offer, you grow your funnel, and generate more inbound leads! 
 
-We're firm believers in eating our own dog food, and we.ve been using this on our client sites, as well as our own, testing, optimizing and revising this plugin to make it as user friendly as possible.
+We're firm believers in eating our own dog food, and we've been using this on our client sites, as well as our own, testing, optimizing and revising this plugin to make it as user friendly as possible.
 
 Features include: 
 
