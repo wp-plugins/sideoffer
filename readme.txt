@@ -24,7 +24,7 @@ Features include:
 *	Anchor link triggering via inclusion the "sideoffer" class
 *	Custom Background Graphics ([PSD Source Included](http://www.HeavyDigital.net/wp-content/plugins/sideoffer/images/sideoffer/sideoffer-bg.zip "PSD Source File")) 
 
-If you have questions, comments or feature requests  feel free to email us at Info@HeaavyDigital.net. 
+If you have questions, comments or feature requests  feel free to email us at Info@HeavyDigital.net 
 
 Stay in the know:  Become a fan of Heavy Digital on Facebook!  http://www.facebook.com/HeavyDigital 
 
