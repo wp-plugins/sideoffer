@@ -12,9 +12,11 @@ SideOffer is a pop-out tab slider, designed to increase conversions by allowing 
 
 == Description ==
 
-You need to get your offer or call to action noticed, and SideOffer can help. A slick op-out tab slider with fully customizable graphics (PSD included!), SideOffer is designed to help increase leads and conversions by allowing you to present your offer in a persistant floating tab on the side of every page of your site, giving your users more opportunity to take notice and take action! 
+You need to get your offer or call to action noticed, and this plugin can help. A slick side tab pop-out slider with fully customizable graphics (PSD included!), [SideOffer](http://www.HeavyDigital.net/plugins/sideoffer/  "SideOffer Homepage")SideOffer is designed to help increase leads and conversions by allowing you to present your offer in a persistant side tab on every page of your site, giving your users more opportunity to take notice and take action! 
 
-You could collect emails for your newsletter, offer a free download or make your contact form available on every page. 
+SideOffer was developed to help strengthen and sustain your inbound marketing and conversion optimization efforts. You could collect emails for your newsletter, offer a free download or make your contact form available on every page. How you use it is up to you, but hte net result is the same: By making it easier for your users to act on your offer, you grow your funnel, and generate more inbound leads! 
+
+We're firm believers in eating our own dog food, and we.ve been using this on our client sites, as well as our own, testing, optimizing and revising this plugin to make it as user friendly as possible.
 
 Features include: 
 
@@ -35,6 +37,12 @@ Be sure to check out our site www.HeavyDigital.net
 1. Configure the plugin through the top level SideOffer menu item (Near the bottom)
 1. Optional: Edit the included PSD to reflect the aesthetic of your site
 1. Optional: Include &lt;a href="javascript:void(0);" class="sideoffer"&gt;Links&lt;/a&gt; on your site to trigger the SideOffer
+
+
+== Screenshots  ==
+
+1. SideOffer Configuration Options
+2. SideOffer UI Side Tab (Live on HeavyDigital.net)
 
 == Changelog ==
 
