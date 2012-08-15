@@ -159,8 +159,14 @@ function hd_sideoffer() {
     <?php
 }
 
+/*** SideOffer JS ***/
+if (get_option('hd_sideoffer_mode')!="setup") add_action('wp_head','hd_sideoffer_js',100);
+function hd_sideoffer_css() {
+	wp_enqueue_script('jquery');
+}
+
 /*** SideOffer CSS ***/
-add_action('wp_head','hd_sideoffer_css',100);
+if (get_option('hd_sideoffer_mode')!="setup") add_action('wp_head','hd_sideoffer_css',100);
 add_action('admin_head-toplevel_page_sideoffer','hd_sideoffer_css');
 function hd_sideoffer_css() {
 	?>
