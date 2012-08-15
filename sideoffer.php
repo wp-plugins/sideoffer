@@ -161,7 +161,7 @@ function hd_sideoffer() {
 
 /*** SideOffer JS ***/
 if (get_option('hd_sideoffer_mode')!="setup") add_action('wp_head','hd_sideoffer_js',100);
-function hd_sideoffer_css() {
+function hd_sideoffer_js() {
 	wp_enqueue_script('jquery');
 }
 
