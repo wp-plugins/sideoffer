@@ -8,7 +8,7 @@ Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-SideOffer is a pop-out side tab slider, designed to generate leads & increase conversions by allowing you to present your users with a highly visible call to action.
+SideOffer is a pop-out side tab slider designed to generate leads & increase conversions by presenting a highly visible call to action to your users.
 
 == Description ==
 
