@@ -3,7 +3,7 @@
 Plugin Name: SideOffer
 Plugin URI: http://www.heavydigital.net/plugins/sideoffer/?utm_source=wpadmin-plugins&utm_medium=plugin&utm_campaign=SideOffer
 Description: <a href="http://www.heavydigital.net/plugins/sideoffer/?utm_source=wpadmin-plugins&utm_medium=plugin&utm_campaign=SideOffer" target="_blank">SideOffer</a> is a pop-out content slider, designed to increase conversions by allowing you to present your users with highly visible calls to action. You could collect emails for your newsletter, offer a free download or make your contact form persistant. Features include an easy and interactive setup, custom graphics (PSD Source included) and the integration of a "sideoffer" class, allowing users to trigger the slider via anchor link.
-Version: 1.0.1
+Version: 1.0.1.1
 Author: Heavy Digital
 Author URI: http://www.HeavyDigital.net/?utm_source=wpadmin-plugins&utm_medium=plugin&utm_campaign=SideOffer
 */
@@ -11,7 +11,7 @@ Author URI: http://www.HeavyDigital.net/?utm_source=wpadmin-plugins&utm_medium=p
 // Defaults
 define( 'HD_PUGIN_NAME', 'SideOffer');
 define( 'HD_PLUGIN_DIRECTORY', 'sideoffer');
-define( 'HD_CURRENT_VERSION', '1.0.1' );
+define( 'HD_CURRENT_VERSION', '1.0.1.1' );
 
 // Admin Page
 require_once('sideoffer-options.php');
@@ -21,7 +21,6 @@ add_action( 'admin_menu', 'hd_create_menu' );
 
 //call register settings function
 add_action( 'admin_init', 'hd_register_settings' );
-
 
 register_activation_hook(__FILE__, 'hd_activate');
 register_deactivation_hook(__FILE__, 'hd_deactivate');
@@ -133,6 +132,10 @@ function hd_sideoffer_admin_styles() {
 if (get_option('hd_sideoffer_mode')!="setup") add_action('wp_footer','hd_sideoffer',100);
 add_action('admin_head-toplevel_page_sideoffer','hd_sideoffer');
 function hd_sideoffer() {
+	// Enqueue JavaScript
+	add_action('wp_head','hd_sideoffer_js',100);
+	// Enqueue CSS
+	add_action('wp_head','hd_sideoffer_css',100);
 	?>
     <!-- SideOffer -->
 	<script type="text/javascript">
@@ -159,14 +162,14 @@ function hd_sideoffer() {
     <?php
 }
 
-/*** SideOffer JS ***/
-if (get_option('hd_sideoffer_mode')!="setup") add_action('wp_head','hd_sideoffer_js',100);
+/*** SideOffer JS  ***
+Since 1.0.2
+***/
 function hd_sideoffer_js() {
 	wp_enqueue_script('jquery');
 }
 
 /*** SideOffer CSS ***/
-if (get_option('hd_sideoffer_mode')!="setup") add_action('wp_head','hd_sideoffer_css',100);
 add_action('admin_head-toplevel_page_sideoffer','hd_sideoffer_css');
 function hd_sideoffer_css() {
 	?>

@@ -41,7 +41,7 @@ Be sure to check out our site www.HeavyDigital.net
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Configure the plugin through the top level SideOffer menu item (Near the bottom)
 1. Optional: Edit the included PSD to reflect the aesthetic of your site
-1. Optional: Include &lt;a href="javascript:void(0);" class="sideoffer"&gt;Links&lt;/a&gt; on your site to trigger the SideOffer
+1. Optional: Include `&lt;a href="javascript:void(0);" class="sideoffer"&gt;Links&lt;/a&gt;` on your site to trigger the SideOffer
 
 
 == Screenshots  ==
@@ -50,6 +50,10 @@ Be sure to check out our site www.HeavyDigital.net
 2. SideOffer UI Side Tab (Live on HeavyDigital.net)
 
 == Changelog ==
+
+= 1.0.2 =
+* Bug: Added wp_enqueue_script('jQuery'); (Oops!)
+* Improvement: Changed the way css & JS get loaded (unhook with a single call to `remove_action('wp_head','hd_sideoffer()')`
 
 = 1.0.1 =
 * Added "Active but not live" admin message
