@@ -99,7 +99,7 @@ function hd_register_settings() {
 	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_mode' );
 	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_title' );
 	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_content' );
-	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_bg', 'hd_sideoffer_bg');
+	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_bg');
 	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_color_text');
 	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_side' );
 	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_top' );
@@ -109,33 +109,29 @@ function hd_register_settings() {
 	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_height');
 }
 
-function hd_sideoffer_bg($url) {
-	return str_replace(get_option('home'),"",$url);
-}
-
 /* Enqueue Admin Scripts */
 add_action('admin_print_scripts', 'hd_sideoffer_admin_scripts');
 function hd_sideoffer_admin_scripts() {
-	wp_enqueue_script('media-upload');
-	wp_enqueue_script('thickbox');
 	wp_enqueue_script('jquery');
   	wp_enqueue_script( 'farbtastic' );
+	wp_enqueue_script('media-upload');
+	wp_enqueue_script('thickbox');
 }
+
 
 add_action('admin_print_styles', 'hd_sideoffer_admin_styles');
 function hd_sideoffer_admin_styles() {
-	wp_enqueue_style('thickbox');
 	wp_enqueue_style( 'farbtastic' );
+	wp_enqueue_style('thickbox');
 }
+
+add_action('admin_head-toplevel_page_sideoffer','hd_sideoffer_css');
+/* End Enqueue Admin Scripts */
 
 /*** SideOffer Offer Code ***/
 if (get_option('hd_sideoffer_mode')!="setup") add_action('wp_footer','hd_sideoffer',100);
 add_action('admin_head-toplevel_page_sideoffer','hd_sideoffer');
 function hd_sideoffer() {
-	// Enqueue JavaScript
-	add_action('wp_head','hd_sideoffer_js',100);
-	// Enqueue CSS
-	add_action('wp_head','hd_sideoffer_css',100);
 	?>
     <!-- SideOffer -->
 	<script type="text/javascript">
@@ -163,14 +159,17 @@ function hd_sideoffer() {
 }
 
 /*** SideOffer JS  ***
+Enqueue JavaScript )jQuery)
 Since 1.0.2
 ***/
+add_action('wp_head','hd_sideoffer_js',100);
 function hd_sideoffer_js() {
 	wp_enqueue_script('jquery');
 }
 
 /*** SideOffer CSS ***/
-add_action('admin_head-toplevel_page_sideoffer','hd_sideoffer_css');
+// Enqueue CSS	
+add_action('wp_head','hd_sideoffer_css',100);
 function hd_sideoffer_css() {
 	?>
     <!-- SideOffer [HD] CSS -->

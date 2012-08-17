@@ -103,7 +103,7 @@ jQuery(document).ready(function($) {
                 <h3 class="hndle"><span>About <?php echo HD_PUGIN_NAME; ?></span></h3>
                 <div class="inside">
                 		<a href="http://www.HeavyDigital.net/plugins/sideoffer/?utm_source=wpadmin-options&utm_medium=plugin&utm_campaign=SideOffer" target="_blank" class="hd_icon hd_logo">SideOffer Homepage</a>
-				<a href="http://wordpress.org/support/plugin/sideoffer" target="_blank">Support Forum" class="hd_icon hd_wordpress">Support Forum</a>
+				<a href="http://wordpress.org/support/plugin/sideoffer" target="_blank" class="hd_icon hd_wordpress">Support Forum</a>
                         <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VA3ZX5ZPCYHXY" target="_blank" class="hd_icon hd_paypal">Support This Plugin</a>
                 </div>
             </div>

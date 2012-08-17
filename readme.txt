@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: action, ad, advertising, admin, business, call to action, contact, contact form 7, content, content marketing, conversion optimization, cta, email, form, inbound, inbound marketing, leads, lead generation, marketing, offer, pop up, pop out, popout, popup, promotion, side, side bar, side tab, sidebar, sidetab, slide, slide out, slideout, slider, tab, tab slider
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,17 +43,22 @@ Be sure to check out our site www.HeavyDigital.net
 1. Optional: Edit the included PSD to reflect the aesthetic of your site
 1. Optional: Include `&lt;a href="javascript:void(0);" class="sideoffer"&gt;Links&lt;/a&gt;` on your site to trigger the SideOffer
 
-
 == Screenshots  ==
 
-1. SideOffer Configuration Options
-2. SideOffer UI Side Tab (Live on HeavyDigital.net)
+1. SideOffer UI Side Tab (Live on HeavyDigital.net)
+2. SideOffer Configuration Options
+
+== Frequently Asked Questions ==  
+
+= My shortcode doesn't work on the admin screen = 
+
+This is due to a limitation in do_shortcode(). Your shortcode will execute properly on the front-end of the site.
 
 == Changelog ==
 
 = 1.0.2 =
 * Bug: Added wp_enqueue_script('jQuery'); (Oops!)
-* Improvement: Changed the way css & JS get loaded (unhook with a single call to `remove_action('wp_head','hd_sideoffer()')`
+* Bug: Omitted `hd_sideoffer_bg()` (Unneceserry to filter out site_url, & was breaking installs in subdirectories)
 
 = 1.0.1 =
 * Added "Active but not live" admin message
