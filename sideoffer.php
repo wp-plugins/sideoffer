@@ -3,7 +3,7 @@
 Plugin Name: SideOffer
 Plugin URI: http://www.heavydigital.net/plugins/sideoffer/?utm_source=wpadmin-plugins&utm_medium=plugin&utm_campaign=SideOffer
 Description: <a href="http://www.heavydigital.net/plugins/sideoffer/?utm_source=wpadmin-plugins&utm_medium=plugin&utm_campaign=SideOffer" target="_blank">SideOffer</a> is a pop-out content slider, designed to increase conversions by allowing you to present your users with highly visible calls to action. You could collect emails for your newsletter, offer a free download or make your contact form persistant. Features include an easy and interactive setup, custom graphics (PSD Source included) and the integration of a "sideoffer" class, allowing users to trigger the slider via anchor link.
-Version: 1.0
+Version: 1.0.1.1
 Author: Heavy Digital
 Author URI: http://www.HeavyDigital.net/?utm_source=wpadmin-plugins&utm_medium=plugin&utm_campaign=SideOffer
 */
@@ -11,7 +11,7 @@ Author URI: http://www.HeavyDigital.net/?utm_source=wpadmin-plugins&utm_medium=p
 // Defaults
 define( 'HD_PUGIN_NAME', 'SideOffer');
 define( 'HD_PLUGIN_DIRECTORY', 'sideoffer');
-define( 'HD_CURRENT_VERSION', '1.0' );
+define( 'HD_CURRENT_VERSION', '1.0.1.1' );
 
 // Admin Page
 require_once('sideoffer-options.php');
@@ -21,7 +21,6 @@ add_action( 'admin_menu', 'hd_create_menu' );
 
 //call register settings function
 add_action( 'admin_init', 'hd_register_settings' );
-
 
 register_activation_hook(__FILE__, 'hd_activate');
 register_deactivation_hook(__FILE__, 'hd_deactivate');
@@ -70,7 +69,7 @@ function hd_create_menu() {
 	add_menu_page( 
 	HD_PUGIN_NAME,
 	HD_PUGIN_NAME,
-	'edit_other_pages', // Must be an editor or higher
+	'manage_options',
 	'sideoffer',
 	'sideoffer_options',
 	plugins_url('/images/icon-hd.png', __FILE__));
@@ -80,7 +79,7 @@ function hd_create_menu() {
 	'sideoffer',
 	HD_PUGIN_NAME,
 	HD_PUGIN_NAME,
-	'edit_other_pages', // Must be an editor or higher
+	'manage_options',
 	'sideoffer',
 	'sideoffer_options'
 	);
@@ -100,7 +99,7 @@ function hd_register_settings() {
 	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_mode' );
 	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_title' );
 	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_content' );
-	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_bg', 'hd_sideoffer_bg');
+	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_bg');
 	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_color_text');
 	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_side' );
 	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_top' );
@@ -110,24 +109,24 @@ function hd_register_settings() {
 	register_setting( 'hd-sideoffer-settings', 'hd_sideoffer_height');
 }
 
-function hd_sideoffer_bg($url) {
-	return str_replace(get_option('home'),"",$url);
-}
-
 /* Enqueue Admin Scripts */
 add_action('admin_print_scripts', 'hd_sideoffer_admin_scripts');
 function hd_sideoffer_admin_scripts() {
-	wp_enqueue_script('media-upload');
-	wp_enqueue_script('thickbox');
 	wp_enqueue_script('jquery');
   	wp_enqueue_script( 'farbtastic' );
+	wp_enqueue_script('media-upload');
+	wp_enqueue_script('thickbox');
 }
+
 
 add_action('admin_print_styles', 'hd_sideoffer_admin_styles');
 function hd_sideoffer_admin_styles() {
-	wp_enqueue_style('thickbox');
 	wp_enqueue_style( 'farbtastic' );
+	wp_enqueue_style('thickbox');
 }
+
+add_action('admin_head-toplevel_page_sideoffer','hd_sideoffer_css');
+/* End Enqueue Admin Scripts */
 
 /*** SideOffer Offer Code ***/
 if (get_option('hd_sideoffer_mode')!="setup") add_action('wp_footer','hd_sideoffer',100);
@@ -159,9 +158,18 @@ function hd_sideoffer() {
     <?php
 }
 
+/*** SideOffer JS  ***
+Enqueue JavaScript )jQuery)
+Since 1.0.2
+***/
+add_action('wp_head','hd_sideoffer_js',100);
+function hd_sideoffer_js() {
+	wp_enqueue_script('jquery');
+}
+
 /*** SideOffer CSS ***/
+// Enqueue CSS	
 add_action('wp_head','hd_sideoffer_css',100);
-add_action('admin_head-toplevel_page_sideoffer','hd_sideoffer_css');
 function hd_sideoffer_css() {
 	?>
     <!-- SideOffer [HD] CSS -->

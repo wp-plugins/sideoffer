@@ -1,12 +1,15 @@
 <?php // SideOffer Options Page
 
-add_action( 'admin_notices', 'print_admin_pagehook' );
-function print_admin_pagehook() {
+add_action( 'admin_notices', 'hd_sideoffer_admin_pagehook' );
+function hd_sideoffer_admin_pagehook() {
 	global $hook_suffix;
     if ( $hook_suffix == 'toplevel_page_sideoffer' ) {
 		if ($_REQUEST['settings-updated']==true) 
 			echo '<div id="message" class="updated"><p>Settings Updated.</p></div>'; 
 	}
+	
+	if (get_option('hd_sideoffer_mode')=="setup") echo '<div id="message" class="updated"><p><strong>SideOffer</strong> is active but not live. <a href="admin.php?page=sideoffer">Click Here</a> for configuration options. </p></div>';
+		
 } 
 
 function sideoffer_options() { 
@@ -100,6 +103,7 @@ jQuery(document).ready(function($) {
                 <h3 class="hndle"><span>About <?php echo HD_PUGIN_NAME; ?></span></h3>
                 <div class="inside">
                 		<a href="http://www.HeavyDigital.net/plugins/sideoffer/?utm_source=wpadmin-options&utm_medium=plugin&utm_campaign=SideOffer" target="_blank" class="hd_icon hd_logo">SideOffer Homepage</a>
+				<a href="http://wordpress.org/support/plugin/sideoffer" target="_blank" class="hd_icon hd_wordpress">Support Forum</a>
                         <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VA3ZX5ZPCYHXY" target="_blank" class="hd_icon hd_paypal">Support This Plugin</a>
                 </div>
             </div>
@@ -145,13 +149,13 @@ jQuery(document).ready(function($) {
                 <div class="inside">
                     <table class="form-table">
                     <th scope="row">Offer Title</th>
-                    <td><input type="text" name="hd_sideoffer_title" value="<?php echo get_option('hd_sideoffer_title'); ?>" class="regular-text" style="width:50%" /></td>
+                    <td><input type="text" name="hd_sideoffer_title" value="<?php echo esc_attr(get_option('hd_sideoffer_title')); ?>" class="regular-text" style="width:50%" /></td>
                     </tr>							
                     
                     <tr valign="top">
                     <th scope="row">Offer Content</th>
                     <td>
-                    <textarea name="hd_sideoffer_content" style="width:100%;min-height:300px;"><?php echo get_option('hd_sideoffer_content'); ?></textarea>
+                    <textarea name="hd_sideoffer_content" style="width:100%;min-height:300px;"><?php echo esc_textarea(get_option('hd_sideoffer_content')); ?></textarea>
 					<p class="description">Create your SideOffer content and place it here. You can use text, HTML and [shortcodes]. This plugin is a great companion to Contact Form 7!</p>
                     </td>
                     </tr>
@@ -166,20 +170,20 @@ jQuery(document).ready(function($) {
                     <tr valign="top">
                     <th scope="row">Background Image</th>
                     <td>
-                        <input type="input" name="hd_sideoffer_bg" id="hd_sideoffer_bg" value="<?php echo get_option('hd_sideoffer_bg'); ?>" class="regular-text" style="width:50%" readonly="readonly" />
+                        <input type="input" name="hd_sideoffer_bg" id="hd_sideoffer_bg" value="<?php echo esc_attr(get_option('hd_sideoffer_bg')); ?>" class="regular-text" style="width:50%" readonly="readonly" />
                         <input id="upload_image_button" type="button" value="Select Image" />
                          <p class="description">Upload your <?php echo HD_PUGIN_NAME; ?> image, or select one from the media library. Be sure to select the correct size and click <em>Insert Into Post</em>.</p>
                          <p class="description"><strong>PSD Template can be downloaded <a href="<?php echo plugins_url( 'images/PSD/sideoffer-bg.zip',  __FILE__ ); ?>">here</a></strong></p>
                         <p class="description"></p>
-                        <input type="hidden" name="hd_sideoffer_width" id="hd_sideoffer_width" value="<?php echo get_option('hd_sideoffer_width'); ?>" />
-                        <input type="hidden" name="hd_sideoffer_height" id="hd_sideoffer_height" value="<?php echo get_option('hd_sideoffer_height'); ?>" />
+                        <input type="hidden" name="hd_sideoffer_width" id="hd_sideoffer_width" value="<?php echo esc_attr(get_option('hd_sideoffer_width')); ?>" />
+                        <input type="hidden" name="hd_sideoffer_height" id="hd_sideoffer_height" value="<?php echo esc_attr(get_option('hd_sideoffer_height')); ?>" />
                     </td>
                     </tr>
                     <tr valign="top">
                     <th scope="row">Text Color</th>
                     <td>
                     	<div id="hd_colorpicker"></div>
-                      	<input type="text" id="hd_sideoffer_color_text" name="hd_sideoffer_color_text" value="<?php echo get_option('hd_sideoffer_color_text'); ?>" />
+                      	<input type="text" id="hd_sideoffer_color_text" name="hd_sideoffer_color_text" value="<?php echo esc_attr(get_option('hd_sideoffer_color_text')); ?>" />
                       	<p class="description">Select the color of your SideOffer text</p>
                     </td>
                   </tr>
@@ -206,7 +210,7 @@ jQuery(document).ready(function($) {
                     <tr valign="top">
                     <th scope="row">Top</th>
                     <td>
-                        <input type="input" name="hd_sideoffer_top" id="hd_sideoffer_top" value="<?php echo get_option('hd_sideoffer_top'); ?>" class="regular-text" style="width:40px" />
+                        <input type="input" name="hd_sideoffer_top" id="hd_sideoffer_top" value="<?php echo esc_attr(get_option('hd_sideoffer_top')); ?>" class="regular-text" style="width:40px" />
                         <p class="description">How far from the top of the screen? (pixels)</p>
                     </td>
                     </tr>
@@ -214,7 +218,7 @@ jQuery(document).ready(function($) {
                     <tr valign="top">
                     <th scope="row">In</th>
                     <td>
-                        <input type="input" name="hd_sideoffer_in" id="hd_sideoffer_in" value="<?php echo get_option('hd_sideoffer_in'); ?>" class="regular-text" style="width:40px" />
+                        <input type="input" name="hd_sideoffer_in" id="hd_sideoffer_in" value="<?php echo esc_attr(get_option('hd_sideoffer_in')); ?>" class="regular-text" style="width:40px" />
                         <p class="description">Horizontal pixel position for slidedeck (in position)</p>
                     </td>
                     </tr>                
@@ -222,7 +226,7 @@ jQuery(document).ready(function($) {
                     <tr valign="top">
                     <th scope="row">Out</th>
                     <td>
-                        <input type="input" name="hd_sideoffer_out" id="hd_sideoffer_out" value="<?php echo get_option('hd_sideoffer_out'); ?>" class="regular-text" style="width:40px" /> 
+                        <input type="input" name="hd_sideoffer_out" id="hd_sideoffer_out" value="<?php echo esc_attr(get_option('hd_sideoffer_out')); ?>" class="regular-text" style="width:40px" /> 
                         <p class="description">Horizontal pixel position for slidedeck (out position)</p>
                     </td>
                     </tr>
