@@ -29,7 +29,9 @@ Future Improvements
 * Fully customizable pure CSS side tab
 
 
-If you have questions, comments or feature requests  feel free to email us at Info@HeavyDigital.net 
+If you have questions, comments or feature requests feel free to [contact us](http://www.HeavyDigital.net/contact/ "Contact Us") 
+
+Support requests should be made on the [SideOffer Support Forum](http://wordpress.org/support/plugin/sideoffer "SideOffer Support Forum") 
 
 Stay in the know: [Become a fan of Heavy Digital on Facebook!](http://www.facebook.com/HeavyDigital  "Facebook: Heavy Digital")   
 
@@ -48,7 +50,18 @@ Be sure to check out our site [www.HeavyDigital.net](http://www.HeavyDigital.net
 1. SideOffer UI Side Tab (Live on HeavyDigital.net)
 2. SideOffer Configuration Options
 
-== Frequently Asked Questions ==  
+== Frequently Asked Questions == 
+
+= SideOffer works on the admin screen, but not on my site = 
+
+The most likely cause is a JavaScript error somewhere in your site. Usually this is caused by a 3rd party plugin. Use the JavaScript console in your browser to identify the issue. Unfortunately we cannot troubleshoot issues with 3rd party plugins, so you should contact the author of that plugin for a fix. If the problem is with the SideOffer code please post in the support forum with the following details:
+
+* Site URL
+* SideOffer Background Images URL
+* WordPress Version
+* Plugin Version
+
+Include as many other relevent details as you can so we can try to pinpoint the problem.
 
 = My shortcode doesn't work on the admin screen = 
 
