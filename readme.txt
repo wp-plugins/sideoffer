@@ -31,9 +31,9 @@ Future Improvements
 
 If you have questions, comments or feature requests  feel free to email us at Info@HeavyDigital.net 
 
-Stay in the know:  Become a fan of Heavy Digital on Facebook!  http://www.facebook.com/HeavyDigital 
+Stay in the know: [Become a fan of Heavy Digital on Facebook!](http://www.facebook.com/HeavyDigital  "Facebook: Heavy Digital")   
 
-Be sure to check out our site www.HeavyDigital.net
+Be sure to check out our site [www.HeavyDigital.net](http://www.HeavyDigital.net/  "Heavy Digital Homepage")
 
 == Installation ==
 
@@ -41,7 +41,7 @@ Be sure to check out our site www.HeavyDigital.net
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Configure the plugin through the top level SideOffer menu item (Near the bottom)
 1. Optional: Edit the included PSD to reflect the aesthetic of your site
-1. Optional: Include `&lt;a href="javascript:void(0);" class="sideoffer"&gt;Links&lt;/a&gt;` on your site to trigger the SideOffer
+1. Optional: Include `<a href="javascript:void(0);" class="sideoffer">Links</a>` on your site to trigger the SideOffer
 
 == Screenshots  ==
 
@@ -52,17 +52,17 @@ Be sure to check out our site www.HeavyDigital.net
 
 = My shortcode doesn't work on the admin screen = 
 
-This is due to a limitation in do_shortcode(). Your shortcode will execute properly on the front-end of the site.
+This is due to a limitation in `do_shortcode()`. Your shortcode will execute properly on the front-end of the site.
 
 == Changelog ==
 
 = 1.0.2 =
-* Bug: Added wp_enqueue_script('jQuery'); (Oops!)
+* Bug: Added `wp_enqueue_script('jQuery');` (Oops!)
 * Bug: Omitted `hd_sideoffer_bg()` (Unneceserry to filter out site_url, & was breaking installs in subdirectories)
 
 = 1.0.1 =
 * Added "Active but not live" admin message
-* Bug Fixes (Missing esc_attr(),$capability=manage_options)
+* Bug Fixes (Missing `esc_attr()`,`$capability=manage_options`)
 
 = 1.0 =
 * Initial Release
