@@ -3,7 +3,7 @@
 Plugin Name: SideOffer
 Plugin URI: http://www.heavydigital.net/plugins/sideoffer/?utm_source=wpadmin-plugins&utm_medium=plugin&utm_campaign=SideOffer
 Description: <a href="http://www.heavydigital.net/plugins/sideoffer/?utm_source=wpadmin-plugins&utm_medium=plugin&utm_campaign=SideOffer" target="_blank">SideOffer</a> is a pop-out content slider, designed to increase conversions by allowing you to present your users with highly visible calls to action. You could collect emails for your newsletter, offer a free download or make your contact form persistant. Features include an easy and interactive setup, custom graphics (PSD Source included) and the integration of a "sideoffer" class, allowing users to trigger the slider via anchor link.
-Version: 1.0.2
+Version: 1.0.3
 Author: Heavy Digital
 Author URI: http://www.HeavyDigital.net/?utm_source=wpadmin-plugins&utm_medium=plugin&utm_campaign=SideOffer
 */
@@ -11,7 +11,7 @@ Author URI: http://www.HeavyDigital.net/?utm_source=wpadmin-plugins&utm_medium=p
 // Defaults
 define( 'HD_PUGIN_NAME', 'SideOffer');
 define( 'HD_PLUGIN_DIRECTORY', 'sideoffer');
-define( 'HD_CURRENT_VERSION', '1.0.2' );
+define( 'HD_CURRENT_VERSION', '1.0.3' );
 
 // Admin Page
 require_once('sideoffer-options.php');
@@ -73,7 +73,6 @@ function hd_create_menu() {
 	'sideoffer',
 	'sideoffer_options',
 	plugins_url('/images/icon-hd.png', __FILE__));
-	
 	
 	add_submenu_page( 
 	'sideoffer',
@@ -159,7 +158,7 @@ function hd_sideoffer() {
 }
 
 /*** SideOffer JS  ***
-Enqueue JavaScript )jQuery)
+Enqueue JavaScript (jQuery)
 Since 1.0.2
 ***/
 add_action('wp_head','hd_sideoffer_js',100);
