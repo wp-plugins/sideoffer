@@ -54,7 +54,7 @@ Be sure to check out our site [www.HeavyDigital.net](http://www.HeavyDigital.net
 
 = SideOffer works on the admin screen, but not on my site = 
 
-The most likely cause is a JavaScript error somewhere in your site. Usually this is caused by a 3rd party plugin. Use the JavaScript console in your browser to identify the issue. Unfortunately we cannot troubleshoot issues with 3rd party plugins, so you should contact the author of that plugin for a fix. If the problem is with the SideOffer code please post in the support forum with the following details:
+The most likely cause is a JavaScript error somewhere in your site. Usually this is caused by a 3rd party plugin. Use the JavaScript console in your browser to identify the issue. Unfortunately we cannot troubleshoot issues with 3rd party plugins, so you should contact the author of that plugin for a fix. If the problem is with the SideOffer code please post in the [SideOffer Support Forum](http://wordpress.org/support/plugin/sideoffer "SideOffer Support Forum") with the following details:
 
 * Site URL
 * SideOffer Background Images URL
